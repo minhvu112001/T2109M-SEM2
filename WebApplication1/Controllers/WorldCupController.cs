@@ -1,23 +1,64 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
 
-namespace Demo1.Controllers
+namespace MvcMovie.Controllers
 {
     public class WorldCup : Controller
     {
-        public string Welcome2(string name, int numTimes = 1)
-        {
-            return HtmlEncoder.Default.Encode($"Team {name}, NumTimes is: {numTimes}");
-        }
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult TeamFootball(string name, int numTimes = 12)
+
+        public IActionResult Detail(int id)
         {
-            ViewData["Message"] = "Team " + name;
-            ViewData["NumTimes"] = numTimes;
+            if (id == 1)
+            {
+                ViewData["name1"] = "Anh";
+                ViewData["img1"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Anh.png";
+                ViewData["name2"] = "Mỹ";
+                ViewData["img2"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/My.png";
+                ViewData["end"] = "0 - 0";
+            }
+            else if (id == 2)
+            {
+                ViewData["name1"] = "Qatar";
+                ViewData["img1"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Qatar.png";
+                ViewData["name2"] = "Senegal";
+                ViewData["img2"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Senegal.png";
+                ViewData["end"] = "1 - 3";
+            }
+            else if (id == 3)
+            {
+                ViewData["name1"] = "Iran";
+                ViewData["img1"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Iran.png";
+                ViewData["name2"] = "Wales";
+                ViewData["img2"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Wales.png";
+                ViewData["end"] = "2 - 0";
+            }
+            else
+            {
+                ViewData["name1"] = "Anh";
+                ViewData["img1"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Anh.png";
+                ViewData["name2"] = "Mỹ";
+                ViewData["img2"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/My.png";
+                ViewData["end"] = "0 - 0";
+            }
+            //switch (id)
+            //{
+            //    case 1:
+
+            //        break;
+
+            //    case 2:
+
+            //        break;
+            //    default:
+
+            //        break;
+            //}
+
             return View();
         }
+
     }
 }
