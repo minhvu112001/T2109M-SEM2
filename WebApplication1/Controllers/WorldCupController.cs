@@ -35,6 +35,14 @@ namespace MvcMovie.Controllers
                 ViewData["img2"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Wales.png";
                 ViewData["end"] = "2 - 0";
             }
+            else if (id == 4)
+            {
+                ViewData["name1"] = "Han Quoc";
+                ViewData["img1"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/SouthKorea.png";
+                ViewData["name2"] = "Ghana";
+                ViewData["img2"] = "https://s1.vnecdn.net/vnexpress/restruct/i/v681/flag/Ghana.png";
+                ViewData["end"] = "2 - 3";
+            }
             else
             {
                 ViewData["name1"] = "Anh";
