@@ -163,10 +163,10 @@ namespace Demo1.Controllers
             return View(movie);
         }
 
-        // POST: Movies/Delete/5
+        // POST: Movies/Delete/6
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id, bool notUsed)
         {
             if (_context.Movie == null)
             {
